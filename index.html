@@ -9,7 +9,8 @@
     <title>Movie Tracker</title>
 </head>
 <body>
-    <h1>Hello World!!</h1>
+    <header id="header">
+    <h1>Movie Tracker</h1>
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -28,12 +29,37 @@
           </div>
         </div>
       </nav>
+    </header>
     
-      <div>
-        <input type="text">
-        <button>Click</button>
-        <p></p>
+
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" placeholder="Search For a Movie!">
+        </div>
+        <div class="control">
+          <button class="button is-info">
+            Search
+          </button>
+        </div>
       </div>
+
+      <!-- <div class="tile-is-parent hide">
+        <article class="tile is-child notification is-info">
+          <p class="title"><span id="movie-title"></span></p>
+          <p class="subtitle"><span id="release-date"></span></p>
+          <figure class="image is-4by3">
+            <img id="poster" src="">
+          </figure>
+        </article>
+      </div> -->
+    <div>
+        <h3>Movies I've Seen:</h3>
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>  
    
 
 
