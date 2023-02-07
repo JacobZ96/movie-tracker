@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Movie Tracker</title>
 </head>
 <body>
-    <header id="header">
-    <h1>Movie Tracker</h1>
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <header class="header-content column">
+      <h1 id="main-header-text">Movie Tracker</h1>
+      <nav class="navbar" role="navigation" aria-label="dropdown navigation">
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Links
           </a>
           <div class="navbar-dropdown">
             <a class="navbar-item">
-              <a href="https://www.amctheatres.com/">AMC Theater</a>
+              <a href="https://www.amctheatres.com/" target="_blank" rel="nonopener noreferrer">AMC Theater</a>
             </a>
             <a class="navbar-item">
-              <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>
+              <a href="https://www.rottentomatoes.com/" target="_blank" rel="nonopener noreferrer">Rotten Tomatoes</a>
             </a>
             <a class="navbar-item">
-              <a href="https://www.fandango.com/">Fandango</a>
+              <a href="https://www.fandango.com/" target="_blank" rel="nonopener noreferrer">Fandango</a>
             </a>
           </div>
         </div>
@@ -32,17 +35,18 @@
     </header>
     
 
-      <div class="field has-addons">
+      <div class="column is-centered field has-addons">
         <div class="control">
-          <input class="input" type="text" placeholder="Search For a Movie!">
+          <input class="input is-medium is-rounded" type="text" placeholder="Search For a Movie!">
         </div>
         <div class="control">
-          <button class="button is-info">
+          <button class="button is-info is-medium is-rounded">
             Search
           </button>
         </div>
       </div>
 
+      <!-- card what will auto populate when the search is ran -->
       <!-- <div class="tile-is-parent hide">
         <article class="tile is-child notification is-info">
           <p class="title"><span id="movie-title"></span></p>
