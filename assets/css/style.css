@@ -1,7 +1,43 @@
 * {
-    background-color: cadetblue;
+    margin: 0;
+    padding: 0;
+    background-color: ;
 }
 
-/* .hide {
-    display: none;
+
+/* header{
+    background-color: black;
+} */
+#title{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+}
+#user{
+    justify-content: center;
+    /* background-color: black; */
+}
+
+#nav{
+    margin-left: 10px;
+    justify-content:start;
+    align-items: start;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 7px;
+}
+
+#drop{
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 7px;
+}
+
+/* #movieInfo {
+    height: 300px;
+    background-color: white;
+} */
+
+/* #seen{
+    text-align: center;
 } */
