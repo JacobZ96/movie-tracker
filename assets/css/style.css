@@ -1,34 +1,4 @@
 * {
-<<<<<<< HEAD
-    font-family: 'Silkscreen', cursive;
-}
-
-/* .hide {
-    display: none;
-} */
-
-#main-header-text {
-    text-align: center;
-    color: black;
-    font-size: 40px;
-    text-decoration: underline;
-    background-color: coral;
-}
-
-.field {
-    border: 3px solid;
-    border-color: black;
-}
-
-.header-content {
-    display: block;
-}
-
-h3 {
-    text-decoration: underline;
-    font-size: 24px;
-}
-=======
     margin: 0;
     padding: 0;
     background-color: ;
@@ -71,4 +41,3 @@ h3 {
 /* #seen{
     text-align: center;
 } */
->>>>>>> a3038294581f60c014c4f25be56189cccced8ffc
