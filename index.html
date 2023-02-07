@@ -10,13 +10,13 @@
 </head>
 <body>
     <header id="header">
-    <h1>Movie Tracker</h1>
+    <h1 id="title">Movie Tracker</h1>
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+        <div id="nav" class="navbar-item has-dropdown is-hoverable has-background-grey-light	 " >
+          <a class="navbar-link has-text-black-bis	has-background-grey-light">
             Links
           </a>
-          <div class="navbar-dropdown">
+          <div id="drop" class="navbar-dropdown has-background-grey-light">
             <a class="navbar-item">
               <a href="https://www.amctheatres.com/">AMC Theater</a>
             </a>
@@ -32,7 +32,7 @@
     </header>
     
 
-      <div class="field has-addons">
+      <div class="field has-addons" id="user">
         <div class="control">
           <input class="input" type="text" placeholder="Search For a Movie!">
         </div>
@@ -43,7 +43,7 @@
         </div>
       </div>
 
-      <div class="tile-is-parent hide">
+      <div id="movieInfo" class="tile-is-parent hide">
         <article id="movie-info" class="tile is-child notification is-info">
           <p class="title"><span id="movie-title"></span></p>
           <p class="subtitle"><span id="release-date"></span></p>
@@ -53,7 +53,7 @@
         </article>
       </div>
     <div>
-        <h3>Movies I've Seen:</h3>
+        <h3 id="seen">Movies I've Seen:</h3>
         <div>
             <ul class="list">
                 <li></li>
