@@ -1,8 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
+    /* background-color: ; */
+=======
     /* background-color: cadetblue; */
     font-family: 'Silkscreen', cursive;
+>>>>>>> 2383058bec61aabfe627bd317206ededcd348750
 }
 
 /* header{
