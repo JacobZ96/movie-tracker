@@ -31,7 +31,7 @@ https://jacobz96.github.io/movie-tracker/
 ![screenshot of the finished webpage](./assets/screenshots/wireframe-project1.png)
 
 ## Authors 
-* Iaroslav Lasiichuk
-* Axel Iras 
-* Sutton Charpentier
-* Jacob Zea
+* Iaroslav Lasiichuk: https://github.com/IaroslavLasiichuk
+* Axel Iras: https://github.com/axeli12
+* Sutton Charpentier: https://github.com/SuttonCharpentier
+* Jacob Zea: https://github.com/JacobZ96

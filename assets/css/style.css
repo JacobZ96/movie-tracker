@@ -1,18 +1,22 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: ;
+    /* background-color: cadetblue; */
+    font-family: 'Silkscreen', cursive;
 }
-
 
 /* header{
     background-color: black;
 } */
+
 #title{
+    background-color: orange;
+    color: black;
     text-align: center;
     font-size: 40px;
     text-decoration: underline;
 }
+
 #user{
     justify-content: center;
     /* background-color: black; */
@@ -38,6 +42,7 @@
     background-color: white;
 } */
 
-/* #seen{
-    text-align: center;
-} */
+#seen{
+    color: black;
+    text-decoration: underline;
+}
