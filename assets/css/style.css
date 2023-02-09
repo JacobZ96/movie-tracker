@@ -79,6 +79,7 @@
     background-color: aliceblue;
 }
 
+
 .list{
     box-shadow:5px 2px 2px orange;
     margin-bottom: 3%;
@@ -90,3 +91,8 @@
 img{
     border-radius: 5px;   
 }
+
+.hide {
+    display: none;
+}
+
