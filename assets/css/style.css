@@ -75,3 +75,7 @@
 #datepicker{
     background-color: aliceblue;
 }
+
+.hide {
+    display: none;
+}
