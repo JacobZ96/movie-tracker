@@ -1,19 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    /* background-color: ; */
-=======
     /* background-color: cadetblue; */
     font-family: 'Silkscreen', cursive;
->>>>>>> 2383058bec61aabfe627bd317206ededcd348750
 }
 
 /* header{
     background-color: black;
 } */
 
-#title{
+#title {
     background-color: orange;
     color: black;
     text-align: center;
@@ -21,21 +17,21 @@
     text-decoration: underline;
 }
 
-#user{
+#user {
     justify-content: center;
     /* background-color: black; */
 }
 
-#nav{
+#nav {
     margin-left: 10px;
-    justify-content:start;
+    justify-content: start;
     align-items: start;
     border-radius: 25px;
     border: 2px solid black;
     padding: 7px;
 }
 
-#drop{
+#drop {
     border-radius: 25px;
     border: 2px solid black;
     padding: 7px;
@@ -46,7 +42,36 @@
     background-color: white;
 } */
 
-#seen{
+#seen {
     color: black;
     text-decoration: underline;
+}
+
+.list-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: rgb(240, 237, 237);
+    box-shadow: 10px 5px 5px rgb(159, 158, 158);
+
+}
+#datepicker{
+    background-color: aliceblue;
 }
