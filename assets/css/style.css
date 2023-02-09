@@ -80,6 +80,9 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
 .list{
     box-shadow:5px 2px 2px orange;
     margin-bottom: 3%;
@@ -91,8 +94,14 @@
 img{
     border-radius: 5px;   
 }
+<<<<<<< HEAD
 =======
 .hide {
     display: none;
 }
->>>>>>> 05144e6d6169d0f0391c5c400d7c25731a391cfd
+=======
+
+.hide {
+    display: none;
+}
+
