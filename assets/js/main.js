@@ -8,6 +8,7 @@ document.querySelector('button').addEventListener('click', function(){
     getMovie(searchText);
 })
 
+
 // Search for movie and get data 
 function getMovie(searchText) {
     fetch(`https://www.omdbapi.com/?apikey=d5dbe20a&s=${searchText}`)
