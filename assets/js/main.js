@@ -110,4 +110,4 @@ function getChuck() {
 
  document.getElementById('chuckBtn').addEventListener('click', function(){
     getChuck()
- });
+ });})
