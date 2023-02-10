@@ -28,6 +28,7 @@
           </a>
           <a class="navbar-item">
             <a href="https://www.fandango.com/" target="_blank" rel="nonopener noreferrer">Fandango</a>
+
           </a>
         </div>
       </div>
@@ -41,17 +42,27 @@
       <input class="input" type="text" placeholder="Search For a Movie!">
     </div>
     <div class="control">
+      <button class="btn-search button is-info">
       <button class="button is-info" id="searchBtn">
         Search
       </button>
     </div>
   </div>
+  </div>
+
+  <div class="image">
+    <figure class="image is-2by1">
+      <img id="poster" src="https://camblycontent.files.wordpress.com/2016/07/favorite-movies-of-all-time.png">
+    </figure>
+  </div>
+
   
   <!-- Container for movies -->
   <div class="container flex-column">
     <div class="flex-column">
       <h2 id="seen">🍿Movies I've Seen🍿:</h2>
       <div>
+        <ul class="list type= 1">
         <ul class="list">
           <li class="list-buttons"></li>
         </ul>
@@ -78,6 +89,19 @@
         <button class="button btn-submit is-fullwidth mt-2 is-primary">Submit</button>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
+     <!-- Show error message -->
+     <div class="modal modal-err is-primary">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          Movies not found
+        </section>
+      </div>
     </div>
     <div></div>
      <!-- jQuery UI <script> tag -->

@@ -1,8 +1,13 @@
-var today = dayjs();
-var currentDay = dayjs().format("dddd, MMM D, YYYY");
-console.log(currentDay);
+// Variables
+const mainEl = $('.main');
+const searchButton = document.querySelector('.btn-search');
+const modal = document.querySelector('.modal');
+const errorMessage = document.querySelector('.modal-err ');
+const closeMessageBox = document.querySelector('.delete');
+const closeModal = document.querySelector('.modal-close');
 
 // Start search
+searchButton.addEventListener('click', function () {
 document.getElementById('searchBtn').addEventListener('click', function(){
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
@@ -18,7 +23,7 @@ function getMovie(searchText) {
         .then(function (data) {
             let movies = data.Search;
             console.log(movies)
-            for (let i = 0; i < movies.length; i++){
+            for (let i = 0; i < movies.length; i++) {
                 let title = movies[i].Title;
                 let imageCon = document.querySelector('.image');
                 localStorage.setItem('movieId', title);
@@ -32,60 +37,68 @@ function getMovie(searchText) {
                     <figure>
                     <img src="${movies[i].Poster} alt="${"Poster for"}${movies[i].Title}"></figure> 
                     <a href="http://imdb.com/title/${movies[i].imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
-                    <button class="button buttons is-info" id=${movies[i].imdbID} data-title = ${titleForAttribute}>Add to list</button>
+                    <button class="button buttons is-info" id=${titleForAttribute} data-title = ${titleForAttribute}>Add to list</button>
                 </article>`
             }
         })
         .catch((err) => {
-            alert(err)
+            showError(err);
         });
     document.querySelector(".main").innerHTML = '';
 }
-let movieId = localStorage.getItem('movieId');
-// Create buttons
-function movieSelected(event) {
-    printDate();
-    let selected = event.target;
-    let dataTitle = selected.getAttribute('data-title');
- 
-    listOfButtons = document.querySelector('.list-buttons');
-    let date = document.querySelector('.input-date').value;
-    let setDate = localStorage.setItem('date', date);
-    if (dataTitle.length > 1 && dataTitle !== movieId) {
-        let list = document.createElement('li');
-        list.setAttribute('id', movieId);
-        localStorage.setItem('movieId', dataTitle);
-        list.classList.add('button');
-        let movieSeenOn = localStorage.getItem('date');
-        list.innerHTML = `${dataTitle.replace(/[-]/g, ' ')} ${movieSeenOn}`;
-        listOfButtons.appendChild(list);
-    } 
+
+// Show error message
+function showError() {
+    errorMessage.classList.toggle('is-active');
 }
-document.querySelector('.main').addEventListener('click', movieSelected);
-let modal = document.querySelector('.modal');
+closeMessageBox.addEventListener('click', showError);
+
 // Show modal
 function showModal() {
     modal.classList.toggle('is-active');
 }
-document.querySelector('.modal-close').addEventListener('click', showModal);
+closeModal.addEventListener('click', showModal);
 
 // Datepicker widget
 $(function () {
     $('#datepicker').datepicker({
-      changeMonth: true,
-      changeYear: true,
+        changeMonth: true,
+        changeYear: true,
     });
 });
-  
-// Print selected date
+
+let movieId = localStorage.getItem('movieId');
+// Create buttons
+
+mainEl.on('click', '.buttons', function () {
+    printDate();
+});
 let printDate = function () {
+    let selectDate = document.querySelector('.input-date').value;
     modal.classList.toggle('is-active');
-    let date = document.querySelector('.input-date').value;
-    localStorage.setItem('date', date);
-    let movieSeenOn = localStorage.getItem('date');
-    let addToList = document.getElementById(movieId);
-    console.log(addToList);
+    localStorage.setItem('date', selectDate);
+    let selected = event.target;
+    console.log(selected.id);
+    localStorage.setItem('movie', selected.id);
 }
+
+// Create buttons
+function movieSelected() {
+    let selected = event.target;
+    listOfButtons = document.querySelector('.list-buttons');
+    let date = document.querySelector('.input-date').value;
+    let setDate = localStorage.setItem('date', date);
+    let list = document.createElement('li');
+    list.setAttribute('id', movieId);
+    let dataTitle = localStorage.getItem('movie');
+    list.classList.add('button');
+    let movieSeenOn = localStorage.getItem('date');
+    list.innerHTML = `${dataTitle} ${movieSeenOn}`;
+    listOfButtons.appendChild(list);
+    localStorage.clear();
+    modal.classList.toggle('is-active');
+}
+document.querySelector('.btn-submit').addEventListener('click', movieSelected);
 document.querySelector('.btn-submit').addEventListener('click', printDate);
 
 function getChuck() {
