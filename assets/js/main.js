@@ -7,11 +7,10 @@ const closeMessageBox = document.querySelector('.delete');
 const closeModal = document.querySelector('.modal-close');
 
 // Start search
-document.getElementById('searchBtn').addEventListener('click', function(){
+searchButton.addEventListener('click', function () {
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
 })
-
 
 // Search for movie and get data 
 function getMovie(searchText) {
@@ -98,7 +97,6 @@ function movieSelected() {
     modal.classList.toggle('is-active');
 }
 document.querySelector('.btn-submit').addEventListener('click', movieSelected);
-document.querySelector('.btn-submit').addEventListener('click', printDate);
 
 function getChuck() {
     console.log('You have been Chucked!')
