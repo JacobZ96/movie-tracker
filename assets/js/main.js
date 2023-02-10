@@ -8,9 +8,11 @@ const closeModal = document.querySelector('.modal-close');
 
 // Start search
 searchButton.addEventListener('click', function () {
+document.getElementById('searchBtn').addEventListener('click', function(){
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
 })
+
 
 // Search for movie and get data 
 function getMovie(searchText) {
@@ -97,3 +99,15 @@ function movieSelected() {
     modal.classList.toggle('is-active');
 }
 document.querySelector('.btn-submit').addEventListener('click', movieSelected);
+document.querySelector('.btn-submit').addEventListener('click', printDate);
+
+function getChuck() {
+    console.log('You have been Chucked!')
+    fetch(`https://api.chucknorris.io/jokes/random`)
+    .then((response) => response.json())
+    .then((data) => console.log(data.value))
+};
+
+ document.getElementById('chuckBtn').addEventListener('click', function(){
+    getChuck()
+ });

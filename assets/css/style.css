@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: cadetblue; */
+    /* background-color:darkcyan; */
     font-family: 'Silkscreen', cursive;
 }
 
@@ -47,6 +47,7 @@
     text-decoration: underline;
     font-weight: bold;
     background-color: orange;
+    font-size: x-large;
 }
 
 .list-buttons {
@@ -79,7 +80,6 @@
     background-color: aliceblue;
 }
 
-
 .list{
     box-shadow:5px 2px 2px orange;
     margin-bottom: 3%;
@@ -95,3 +95,10 @@ img{
 .hide {
     display: none;
 }
+
+.image-container {
+    text-align: center;
+    padding: 30px;
+    background-color: darkcyan;
+}
+
