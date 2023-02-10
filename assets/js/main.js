@@ -12,7 +12,6 @@ searchButton.addEventListener('click', function () {
     getMovie(searchText);
 })
 
-
 // Search for movie and get data 
 function getMovie(searchText) {
     fetch(`https://www.omdbapi.com/?apikey=d5dbe20a&s=${searchText}`)
@@ -24,13 +23,9 @@ function getMovie(searchText) {
             console.log(movies)
             for (let i = 0; i < movies.length; i++) {
                 let title = movies[i].Title;
-                let imageCon = document.querySelector('.image');
-                let imageCon = document.querySelector('.image');
                 localStorage.setItem('movieId', title);
                 let titleForAttribute = title.replace(/["" & :]/g, '-');
                 let parent = document.querySelector('.main');
-                imageCon.classList.add("hide");
-                imageCon.classList.add("hide");
                 parent.innerHTML += `
                 <article class="flex-column box">
                 <p class="" >${movies[i].Title}</p>
