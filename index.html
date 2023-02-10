@@ -15,23 +15,26 @@
   <header id="header">
     <h1 id="title">Movie Tracker🍿</h1>
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div id="nav" class="navbar-item has-dropdown is-hoverable has-background-grey-light">
+      <div id="nav" class="navbar-item has-dropdown is-hoverable has-background-grey-light is-responsive">
         <a class="navbar-link has-text-black-bis	has-background-grey-light">
           Links
         </a>
         <div id="drop" class="navbar-dropdown has-background-grey-light">
           <a class="navbar-item">
-            <a href="https://www.amctheatres.com/" target="_blank">AMC Theater</a>
+            <a href="https://www.amctheatres.com/" target="_blank" rel="nonopener noreferrer">AMC Theater</a>
           </a>
           <a class="navbar-item">
-            <a href="https://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>
+            <a href="https://www.rottentomatoes.com/" target="_blank" rel="nonopener noreferrer">Rotten Tomatoes</a>
           </a>
           <a class="navbar-item">
-            <a href="https://www.fandango.com/" target="_blank">Fandango</a>
+            <a href="https://www.fandango.com/" target="_blank" rel="nonopener noreferrer">Fandango</a>
           </a>
         </div>
       </div>
     </nav>
+    <div class="chuck-joke">
+       <button id="chuckBtn">CHUCK!</button>
+    </div>
   </header>
   <div class="field has-addons" id="user">
     <div class="control">
@@ -43,26 +46,29 @@
       </button>
     </div>
   </div>
-  </div>
-
-  <div class="image">
-    <figure class="image is-2by1">
-      <img id="poster" src="https://camblycontent.files.wordpress.com/2016/07/favorite-movies-of-all-time.png">
-    </figure>
-  </div>
-
+  
   <!-- Container for movies -->
   <div class="container flex-column">
     <div class="flex-column">
       <h2 id="seen">🍿Movies I've Seen🍿:</h2>
       <div>
-        <ul class="list type= 1">
+        <ul class="list">
           <li class="list-buttons"></li>
         </ul>
       </div>
       <section class="flex-row main">
       </section>
     </div>
+    
+  </div>
+<!-- main image that appears when the page is loaded -->
+  <div class="image-container">
+    <figure class="image is-3by1">
+      <img id="poster" src="https://camblycontent.files.wordpress.com/2016/07/favorite-movies-of-all-time.png">
+    </figure>
+  </div>
+
+
     <!-- Modal -->
     <div class="modal">
       <div class="modal-background"></div>

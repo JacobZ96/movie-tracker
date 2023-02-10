@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: cadetblue; */
+    /* background-color:darkcyan; */
     font-family: 'Silkscreen', cursive;
 }
 
@@ -47,6 +47,9 @@
     text-decoration: underline;
     font-weight: bold;
     background-color: orange;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: orange;
 }
 
 .list-buttons {
@@ -78,7 +81,6 @@
 #datepicker{
     background-color: aliceblue;
 }
-
 
 .list{
     box-shadow:5px 2px 2px orange;
