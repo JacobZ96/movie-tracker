@@ -47,6 +47,7 @@
     text-decoration: underline;
     font-weight: bold;
     background-color: orange;
+    font-size: x-large;
 }
 
 .list-buttons {
@@ -79,7 +80,6 @@
     background-color: aliceblue;
 }
 
-
 .list{
     box-shadow:5px 2px 2px orange;
     margin-bottom: 3%;
@@ -95,4 +95,3 @@ img{
 .hide {
     display: none;
 }
-
