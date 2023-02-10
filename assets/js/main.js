@@ -3,7 +3,7 @@ var currentDay = dayjs().format("dddd, MMM D, YYYY");
 console.log(currentDay);
 
 // Start search
-document.querySelector('button').addEventListener('click', function(){
+document.getElementById('searchBtn').addEventListener('click', function(){
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
 })
@@ -87,3 +87,14 @@ let printDate = function () {
     console.log(addToList);
 }
 document.querySelector('.btn-submit').addEventListener('click', printDate);
+
+function getChuck() {
+    console.log('You have been Chucked!')
+    fetch(`https://api.chucknorris.io/jokes/random`)
+    .then((response) => response.json())
+    .then((data) => console.log(data.value))
+};
+
+ document.getElementById('chuckBtn').addEventListener('click', function(){
+    getChuck()
+ });
