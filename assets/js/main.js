@@ -7,7 +7,7 @@ const closeMessageBox = document.querySelector('.delete');
 const closeModal = document.querySelector('.modal-close');
 
 // Start search
-document.getElementById('searchBtn').addEventListener('click', function(){
+searchButton.addEventListener('click', function () {
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
 })
@@ -23,9 +23,11 @@ function getMovie(searchText) {
             console.log(movies)
             for (let i = 0; i < movies.length; i++) {
                 let title = movies[i].Title;
+                let imageCon = document.querySelector('.image');
                 localStorage.setItem('movieId', title);
                 let titleForAttribute = title.replace(/["" & :]/g, '-');
                 let parent = document.querySelector('.main');
+                imageCon.classList.add("hide");
                 parent.innerHTML += `
                 <article class="flex-column box">
                 <p class="" >${movies[i].Title}</p>
@@ -95,7 +97,6 @@ function movieSelected() {
     modal.classList.toggle('is-active');
 }
 document.querySelector('.btn-submit').addEventListener('click', movieSelected);
-document.querySelector('.btn-submit').addEventListener('click', printDate);
 
 function getChuck() {
     console.log('You have been Chucked!')
