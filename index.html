@@ -15,12 +15,12 @@
   <header id="header">
     <h1 id="title">Movie Tracker🍿</h1>
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div id="nav" class="navbar-item has-dropdown is-hoverable has-background-grey-light is-responsive">
-        <a class="navbar-link has-text-black-bis	has-background-grey-light">
+      <div id="nav" class="navbar-item has-dropdown is-hoverable has-background-info is-responsive">
+        <a class="navbar-link has-text-link-light	has-background-info">
           Links
         </a>
-        <div id="drop" class="navbar-dropdown has-background-grey-light">
-          <a class="navbar-item">
+        <div id="drop" class="navbar-dropdown has-background-info">
+          <a class="navbar-item ">
             <a href="https://www.amctheatres.com/" target="_blank" rel="nonopener noreferrer">AMC Theater</a>
           </a>
           <a class="navbar-item">
@@ -41,17 +41,20 @@
       <input class="input" type="text" placeholder="Search For a Movie!">
     </div>
     <div class="control">
-      <button class="btn-search button is-info">
+      <button class="button is-info" id="searchBtn">
         Search
       </button>
     </div>
   </div>
+  </div>
+
   
   <!-- Container for movies -->
   <div class="container flex-column">
     <div class="flex-column">
       <h2 id="seen">🍿Movies I've Seen🍿:</h2>
       <div>
+        <ul class="list type= 1">
         <ul class="list">
           <li class="list-buttons"></li>
         </ul>
@@ -77,6 +80,7 @@
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
+    
      <!-- Show error message -->
      <div class="modal modal-err is-primary">
       <div class="modal-background"></div>
@@ -89,6 +93,7 @@
         </section>
       </div>
     </div>
+    <div></div>
      <!-- jQuery UI <script> tag -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

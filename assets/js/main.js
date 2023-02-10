@@ -7,7 +7,7 @@ const closeMessageBox = document.querySelector('.delete');
 const closeModal = document.querySelector('.modal-close');
 
 // Start search
-searchButton.addEventListener('click', function () {
+document.getElementById('searchBtn').addEventListener('click', function(){
     let searchText = document.querySelector('input').value;
     getMovie(searchText);
 })
@@ -94,6 +94,7 @@ function movieSelected() {
     localStorage.clear();
     modal.classList.toggle('is-active');
 }
+document.querySelector('.btn-submit').addEventListener('click', movieSelected);
 document.querySelector('.btn-submit').addEventListener('click', printDate);
 
 function getChuck() {

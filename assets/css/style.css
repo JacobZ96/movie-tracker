@@ -1,13 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color:darkcyan; */
     font-family: 'Silkscreen', cursive;
 }
 
-/* header{
-    background-color: black;
-} */
+header{
+    display: inline;
+}
 
 #title {
     background-color: orange;
@@ -19,7 +18,7 @@
 
 #user {
     justify-content: center;
-    /* background-color: black; */
+  
 }
 
 #nav {
@@ -31,16 +30,29 @@
     padding: 7px;
 }
 
+nav a{
+    color: white;
+}
+
 #drop {
     border-radius: 25px;
     border: 2px solid black;
     padding: 7px;
 }
+#chuckBtn{
+    text-align: top;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 7px;
+    float: right;
+    right: auto;
+    background-color: #3e8ed0;
+}
 
-/* #movieInfo {
-    height: 300px;
-    background-color: white;
-} */
+#chuckBtn:hover{
+    background-color: lightgray;
+}
 
 #seen {
     color: black;
@@ -48,8 +60,6 @@
     font-weight: bold;
     background-color: orange;
     font-size: x-large;
-    font-weight: bold;
-    background-color: orange;
 }
 
 .list-buttons {
@@ -98,6 +108,9 @@ img{
     display: none;
 }
 
-.hide {
-    display: none;
+.image-container {
+    text-align: center;
+    padding: 30px;
+    background-color: darkcyan;
 }
+
