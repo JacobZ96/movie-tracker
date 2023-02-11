@@ -28,16 +28,25 @@ header{
     border-radius: 25px;
     border: 2px solid black;
     padding: 7px;
+    width: auto !important;
+    box-shadow: none !important;
+    position: absolute;
+    top: 40px;
+
+
 }
 
 nav a{
     color: white;
+    box-shadow: none !important;
 }
 
 #drop {
     border-radius: 25px;
     border: 2px solid black;
     padding: 7px;
+    width: auto !important;
+    box-shadow: none !important;
 }
 #chuckBtn{
     text-align: top;
@@ -48,10 +57,14 @@ nav a{
     float: right;
     right: auto;
     background-color: #3e8ed0;
+    font-family: 'Silkscreen', cursive;
+    margin-right: 10px;
+
 }
 
 #chuckBtn:hover{
     background-color: lightgray;
+    cursor: pointer;
 }
 
 #seen {
@@ -60,6 +73,7 @@ nav a{
     font-weight: bold;
     background-color: orange;
     font-size: x-large;
+    text-align: center;
 }
 
 .list-buttons {
@@ -112,5 +126,16 @@ img{
     text-align: center;
     padding: 30px;
     background-color: darkcyan;
-}
+} 
 
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+    nav {
+      width:100%;
+   }
+  
+    #drop {
+      white-space: normal;
+      width: 100%;
+   }
+  
+  }
