@@ -7,6 +7,9 @@
 a{
     text-decoration: none !important;
 }
+.fa-video{
+    color: rgb(77, 73, 73);
+}
 li{
     list-style: none;
     background-color: aliceblue;
