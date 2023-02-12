@@ -1,103 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Movie Tracker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&family=Roboto:ital,wght@1,300&display=swap"
+    rel="stylesheet">
+<script src="https://kit.fontawesome.com/be798774c5.js" crossorigin="anonymous"></script>
+    <title>Movie Tracker</title>
 </head>
 
 <body>
-  <header id="header">
-    <h1 id="title">Movie Tracker🍿</h1>
-    <nav class="navbar is-shadowless" role="navigation" aria-label="dropdown navigation">
-      <div id="nav" class="navbar-item has-dropdown is-shadowless is-hoverable has-background-info">
-        <a class="navbar-link has-text-link-light	has-background-info ">
-          Links
-        </a>
-        <div id="drop" class="navbar-dropdown has-background-info">
-          <a class="navbar-item has-background-info">
-            <a href="https://www.amctheatres.com/" target="_blank" rel="nonopener noreferrer">AMC Theater</a>
-          </a>
-          <a class="navbar-item has-background-info">
-            <a href="https://www.rottentomatoes.com/" target="_blank" rel="nonopener noreferrer">Rotten Tomatoes</a>
-          </a>
-          <a class="navbar-item has-background-info">
-            <a href="https://www.fandango.com/" target="_blank" rel="nonopener noreferrer">Fandango</a>
-          </a>
+    <!-- Navbar -->
+    <nav class="navbar is-warning">
+        <div class="navbar-brand">
+            <h1 class="header navbar-item has-text-centered"><i class="fa-sharp fa-solid fa-video"></i>Movie Tracker</h1>
+            <div class="navbar-burger" id="burger" data-target="navbarExampleTransparentExample">
+                <span ></span>
+                <span ></span>
+                <span ></span>
+            </div>
         </div>
-      </div>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Theatres
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" target="_blank" href="https://www.amctheatres.com/">
+                            AMC Theater
+                        </a>
+                        <a class="navbar-item" target="_blank" href="https://www.rottentomatoes.com/">Rotten Tomatoes
+                        </a>
+                        <a class="navbar-item" target="_blank" href="https://www.fandango.com/">Fandango
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item " href="#info">
+                Chuck Joke
+                </a>
+            </div>
+        </div>
     </nav>
+    <!-- Search for a movie -->
+    <div class="container pb-3 mt-5">
+        <div class=" field is-flex is-flex-direction-column is-align-items-center">
+            <h2 class="text-secondary">Search for a movie</h2>
+            <p class="control">
+                <input class="input is-medium m-3" type="text" placeholder="Search">
+            </p>
+            <p class="control">
+                <button class="button btn-search is-info">
+                    Search
+                </button>
+            </p>
+        </div>
+    </div>
+    <!-- Container for movies -->
+    <div class="container flex-column mt-5">
+        <div class="flex-column">
+            <p class="is-size-1">Movies</p>
+            <section class="flex-row main">
+               
+            </section>
+        </div>
+        <!-- Info -->
+        <div id="info" class="tile is-ancestor m-5">
+            <div class="tile is-vertical is-8">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification is-primary">
+                            <p class="title">Description</p>
+                            <p class="subtitle"> Being a fan of movies, one might want to keep track of which movies
+                                they have seen throught
+                                the year.
+                                With this app you are able to search for a specific movie and add it to a list that will
+                                keep track of what movies you have watched and what day they were watched on.</p>
+                        </article>
+                        <article class="tile is-child notification is-warning">
+                            <p class="title">Joke Generator</p>
+                            <p class="subtitle">Click button</p>
+                            <button class="button btn-chuck is-danger">Joke Generator</button>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-info">
+                            <p class="title heading"></p>
+                            <p class="title title-movie"></p>
+                            <p class="subtitle subtitle-movie"></p>
+                            <figure class="image">
+                                <img class="poster" src="">
+                            </figure>
+                            <a class="id-movie subtitle-movie" target="_blank" href="">View IMDB</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-danger has-text-centered">
+                        <p class="title">Chuck Norris joke will be here</p>
+                        <p class="subtitle">Click button Joke Generator</p>
+                        <div class="content chuck-joke">
+                            <!-- Content -->
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-success">
+                    <div class="content">
+                        <p class="title">Movie I've seen</p>
+                        <p class="subtitle">List of movies...</p>
+                        <ul class="list-buttons is-flex is-flex-direction-column">
 
-  </header>
-  <div class="chuck-joke">
-    <button id="chuckBtn">CHUCK!</button>
- </div>
-  <div class="field has-addons" id="user">
-    <div class="control">
-      <input class="input" type="text" placeholder="Search For a Movie!">
-    </div>
-    <div class="control">
-      <button class="button btn-search is-info" id="searchBtn">
-        Search
-      </button>
-    </div>
-  </div>
-  </div>
-  <!-- Container for movies -->
-  <div class="container flex-column">
-    <div class="flex-column">
-      <h2 id="seen">🍿Movies I've Seen🍿:</h2>
-      <div>
-        <ul class="list type= 1">
-        <ul class="list">
-          <li class="list-buttons"></li>
-        </ul>
-      </div>
-      <section class="flex-row main">
-      </section>
-    </div>
-    
-  </div>
-<!-- main image that appears when the page is loaded -->
-  <div class="image-container">
-    <figure class="image is-3by1">
-      <img id="poster" src="https://camblycontent.files.wordpress.com/2016/07/favorite-movies-of-all-time.png">
-    </figure>
-  </div>
-    <!-- Modal -->
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <label class="label">Date</label>
-        <input id="datepicker" class="input input-date is-normal" type="text" placeholder="Select the date">
-        <button class="button btn-submit is-fullwidth mt-2 is-primary">Submit</button>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    
-     <!-- Show error message -->
-     <div class="modal modal-err is-primary">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-          Movies not found
-        </section>
-      </div>
-    </div>
-    <div></div>
-     <!-- jQuery UI <script> tag -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./assets/js/main.js"></script>
+                        </ul>
+                        <div class="content">
+                            <!-- Content -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <p class="title has-text-white has-text-centered">Select Date</p>
+                <input id="datepicker" class="input input-date is-normal" type="text" placeholder="Select the date">
+                <button class="button btn-submit is-fullwidth mt-2 is-primary">Submit</button>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+        <!-- Show error message -->
+        <div class="modal modal-err">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head red">
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    Movies not found
+                </section>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer-background pt-1 pb-1">
+            <div class="content has-text-centered">
+                <p><strong>Made by</strong> Jacob Zea, Sutton Charpentier, Iaroslav Lasiichuk, Axel Iras 2023</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,10 @@
 // Variables
-const mainEl = $('.main');
 const searchButton = document.querySelector('.btn-search');
 const modal = document.querySelector('.modal');
 const errorMessage = document.querySelector('.modal-err ');
 const closeMessageBox = document.querySelector('.delete');
 const closeModal = document.querySelector('.modal-close');
+const mainEl = $('.main');
 
 // Start search
 searchButton.addEventListener('click', function () {
@@ -14,7 +14,7 @@ searchButton.addEventListener('click', function () {
 
 // Search for movie and get data 
 function getMovie(searchText) {
-    fetch(`https://www.omdbapi.com/?apikey=d5dbe20a&s=${searchText}`)
+    fetch(`https://www.omdbapi.com/?apikey=d5dbe20a&s=${searchText}&plot`)
         .then(function (response) {
             return response.json();
         })
@@ -23,14 +23,12 @@ function getMovie(searchText) {
             console.log(movies)
             for (let i = 0; i < movies.length; i++) {
                 let title = movies[i].Title;
-                let imageCon = document.querySelector('.image');
                 localStorage.setItem('movieId', title);
                 let titleForAttribute = title.replace(/["" & :]/g, '-');
                 let parent = document.querySelector('.main');
-                imageCon.classList.add("hide");
                 parent.innerHTML += `
-                <article class="flex-column box">
-                <p class="" >${movies[i].Title}</p>
+                <article class="flex-column box mt-3">
+                <p class=" has-text-weight-bold" >${movies[i].Title}</p>
                     <p class="" >${movies[i].Year}</p>
                     <figure>
                     <img src="${movies[i].Poster} alt="${"Poster for"}${movies[i].Title}"></figure> 
@@ -66,45 +64,81 @@ $(function () {
 });
 
 let movieId = localStorage.getItem('movieId');
-// Create buttons
 
+// Create buttons
 mainEl.on('click', '.buttons', function () {
     printDate();
 });
+
 let printDate = function () {
     let selectDate = document.querySelector('.input-date').value;
     modal.classList.toggle('is-active');
     localStorage.setItem('date', selectDate);
     let selected = event.target;
-    console.log(selected.id);
     localStorage.setItem('movie', selected.id);
 }
 
 // Create buttons
 function movieSelected() {
-    let selected = event.target;
-    listOfButtons = document.querySelector('.list-buttons');
-    let date = document.querySelector('.input-date').value;
-    let setDate = localStorage.setItem('date', date);
+    let listOfButtons = document.querySelector('.list-buttons');
     let list = document.createElement('li');
+    let btn = document.createElement('button');
+    let date = document.querySelector('.input-date').value;
+    localStorage.setItem('date', date);
+    btn.classList.add('is-info', 'button', 'is-small');
+    list.classList.add('is-flex','is-justify-content-space-between','is-info','is-align-items-center','is-align-content-center');
     list.setAttribute('id', movieId);
-    let dataTitle = localStorage.getItem('movie');
-    list.classList.add('button');
+    let dataTitle = localStorage.getItem('movie').replace(/["" -- - & :]/g, ' ');
     let movieSeenOn = localStorage.getItem('date');
     list.innerHTML = `${dataTitle} ${movieSeenOn}`;
+    btn.setAttribute('id',localStorage.getItem('id'));
+    btn.textContent = "❌";
     listOfButtons.appendChild(list);
+    list.appendChild(btn);
     localStorage.clear();
     modal.classList.toggle('is-active');
 }
 document.querySelector('.btn-submit').addEventListener('click', movieSelected);
 
+// Shows Chuk's joke
 function getChuck() {
-    console.log('You have been Chucked!')
     fetch(`https://api.chucknorris.io/jokes/random`)
     .then((response) => response.json())
-    .then((data) => console.log(data.value))
+        .then((data) =>
+            document.querySelector('.chuck-joke').textContent = data.value)
 };
-
- document.getElementById('chuckBtn').addEventListener('click', function(){
+ document.querySelector('.btn-chuck').addEventListener('click', function(){
     getChuck()
  });
+
+//  Shows movie by default
+ document.addEventListener('DOMContentLoaded', (event) => {
+            fetch(`https://www.omdbapi.com/?apikey=d5dbe20a&s=avatar`)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    let movies = data.Search;
+                    document.querySelector('.heading').textContent =`${'Upcoming movie'}`;
+                    document.querySelector('.title-movie').textContent =`${ movies[2].Title}`;
+                    document.querySelector('.subtitle-movie').textContent = `${'Year'} ${movies[2].Year}`;
+                    document.querySelector('.poster').src = movies[2].Poster;
+                    document.querySelector('.id-movie').href = `http://imdb.com/title/${movies[2].imdbID}`;
+                })
+                .catch((err) => {
+                    showError(err);
+                });
+ });
+
+//  Delete list of movies
+function handleRemoveItem(event) {
+    let e = event.target;
+    e.parentElement.remove('li');
+  }
+document.querySelector('.list-buttons').addEventListener('click', handleRemoveItem);
+ 
+// Burger menu 
+
+document.querySelector('#burger').addEventListener('click', () => {
+    document.querySelector('.navbar-menu').classList.toggle('is-active');
+})
