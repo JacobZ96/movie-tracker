@@ -4,92 +4,39 @@
     font-family: 'Silkscreen', cursive;
 }
 
-header{
-    display: inline;
+a{
+    text-decoration: none !important;
 }
-
-#title {
-    background-color: orange;
+li{
+    list-style: none;
+    background-color: aliceblue;
     color: black;
-    text-align: center;
+    height: 50px;
+    padding-left: 5px;
+    border-radius: 6px;
+}
+.header{
     font-size: 40px;
-    text-decoration: underline;
+    font-weight: 600;
 }
-
-#user {
-    justify-content: center;
-  
+.text-secondary{
+    font-size: 30px;
+    letter-spacing: 2px;
 }
-
-#nav {
-    margin-left: 10px;
-    justify-content: start;
-    align-items: start;
-    border-radius: 25px;
-    border: 2px solid black;
-    padding: 7px;
-    width: auto !important;
-    box-shadow: none !important;
-    position: absolute;
-    top: 40px;
-
-
+.is-small{
+    height: 50px;
 }
-
-nav a{
-    color: white;
-    box-shadow: none !important;
+.container{
+    background-color: rgb(203, 216, 237);
+    border-radius: 10px;
 }
-
-#drop {
-    border-radius: 25px;
-    border: 2px solid black;
-    padding: 7px;
-    width: auto !important;
-    box-shadow: none !important;
-}
-#chuckBtn{
-    text-align: top;
-    color: white;
-    border-radius: 25px;
-    font-size: 15px;
-    padding: 7px;
-    float: right;
-    right: auto;
-    background-color: #3e8ed0;
-    font-family: 'Silkscreen', cursive;
-    margin-right: 10px;
-
-}
-
-#chuckBtn:hover{
-    background-color: lightgray;
-    cursor: pointer;
-}
-
-#seen {
-    color: black;
-    text-decoration: underline;
-    font-weight: bold;
-    background-color: orange;
-    font-size: x-large;
-    text-align: center;
-}
-
-.list-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
-
 .flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: orange;
 }
 .flex-column{
     display: flex;
@@ -100,42 +47,10 @@ nav a{
 .box{
     background-color: rgb(240, 237, 237);
     box-shadow: 10px 5px 5px rgb(159, 158, 158);
-
+}
+.red{
+    background-color: rgb(210, 60, 60);
 }
 #datepicker{
     background-color: aliceblue;
 }
-
-.list{
-    box-shadow:5px 2px 2px orange;
-    margin-bottom: 3%;
-}
-.navbar-link{
-    text-align: top;
-}
-
-img{
-    border-radius: 5px;   
-}
-
-.hide {
-    display: none;
-}
-
-.image-container {
-    text-align: center;
-    padding: 30px;
-    background-color: darkcyan;
-} 
-
-@media only screen and (min-width: 280px) and (max-width: 767px) {
-    nav {
-      width:100%;
-   }
-  
-    #drop {
-      white-space: normal;
-      width: 100%;
-   }
-  
-  }
