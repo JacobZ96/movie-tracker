@@ -4,7 +4,9 @@ const modal = document.querySelector('.modal');
 const errorMessage = document.querySelector('.modal-err ');
 const closeMessageBox = document.querySelector('.delete');
 const closeModal = document.querySelector('.modal-close');
+const movieId = localStorage.getItem('movieId');
 const mainEl = $('.main');
+const deleteButton = $('.list-buttons');
 
 // Start search
 searchButton.addEventListener('click', function () {
@@ -63,8 +65,6 @@ $(function () {
     });
 });
 
-let movieId = localStorage.getItem('movieId');
-
 // Create buttons
 mainEl.on('click', '.buttons', function () {
     printDate();
@@ -100,7 +100,7 @@ function movieSelected() {
 }
 document.querySelector('.btn-submit').addEventListener('click', movieSelected);
 
-// Shows Chuk's joke
+// Shows Chuck's joke
 function getChuck() {
     fetch(`https://api.chucknorris.io/jokes/random`)
     .then((response) => response.json())
@@ -130,15 +130,16 @@ function getChuck() {
                 });
  });
 
-//  Delete list of movies
-function handleRemoveItem(event) {
-    let e = event.target;
-    e.parentElement.remove('li');
-  }
-document.querySelector('.list-buttons').addEventListener('click', handleRemoveItem);
+//  Delete button from list of movies
+function handleRemoveItem() {
+   let btnClicked = $(event.target);
+    btnClicked .parent('li').remove();
+}
+deleteButton.on('click', '.is-small', function () {
+    handleRemoveItem();
+})
  
 // Burger menu 
-
 document.querySelector('#burger').addEventListener('click', () => {
     document.querySelector('.navbar-menu').classList.toggle('is-active');
 })
