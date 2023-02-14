@@ -29,7 +29,7 @@ With this app you are able to search for a specific movie and add it to a list t
 ## Live Link 
 https://jacobz96.github.io/movie-tracker/
 ## Screenshot 
-![screenshot of the finished webpage](./assets/screenshots/Final%20movie%20screenshot.png)
+![screenshot of the finished webpage](./assets/screenshots/full%20webpage%20screenshot.png)
 
 ## Authors 
 * Iaroslav Lasiichuk: https://github.com/IaroslavLasiichuk
