@@ -1,14 +1,18 @@
+/* styling for the whole page */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Silkscreen', cursive;
 }
+/* styling for anchor tags */
 a{
     text-decoration: none !important;
 }
+/* styling for icons  */
 .fa-video{
     color: rgb(77, 73, 73);
 }
+/* list styling */
 li{
     list-style: none;
     background-color: aliceblue;
@@ -17,21 +21,27 @@ li{
     padding-left: 5px;
     border-radius: 6px;
 }
+/* styling for header */
 .header{
     font-size: 40px;
     font-weight: 600;
 }
+/* styling for subtitle */
 .text-secondary{
     font-size: 30px;
     letter-spacing: 2px;
 }
+
 .is-small{
     height: 50px;
 }
+
+/* formats the movies that are gathered when searched  */
 .container{
     background-color: rgb(203, 216, 237);
     border-radius: 10px;
 }
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -46,13 +56,16 @@ li{
     justify-content: center;
     align-items: center;
 }
+
 .box{
     background-color: rgb(240, 237, 237);
     box-shadow: 10px 5px 5px rgb(159, 158, 158);
 }
+
 .red{
     background-color: rgb(210, 60, 60);
 }
+
 #datepicker{
     background-color: aliceblue;
 }

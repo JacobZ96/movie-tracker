@@ -22,7 +22,6 @@ function getMovie(searchText) {
         })
         .then(function (data) {
             let movies = data.Search;
-            console.log(movies)
             for (let i = 0; i < movies.length; i++) {
                 let title = movies[i].Title;
                 localStorage.setItem('movieId', title);
